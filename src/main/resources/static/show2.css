@@ -1,0 +1,61 @@
+:root {
+    --black: #000; /* Black color */
+    --white: #ffffff; /* White color */
+    --yellow: #e7d911; /* Yellow color */
+    --light-yellow: #cfc069; /* Light yellow color */
+    --gray: #7f834ec0; /* Gray color with alpha transparency */
+    /* Other variables... */
+}nav {
+    background-color: var(--black);
+    box-shadow: 0 0.8rem 2.4rem var(--shadow-color), 0 1.6rem 5.6rem var(--shadow-color), 0 2.4rem 8rem var(--shadow-color);
+    display: flex;
+    flex-flow: row nowrap;
+    grid-row: 1;
+    padding: var(--default-padding);
+    width: var(--full-w);
+    justify-content: space-between; /* Add this line to space items evenly */
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none; /* Remove default list styles */
+}
+
+nav a {
+    color: var(--white);
+    cursor: pointer;
+    font-size: var(--default-font-size);
+    text-decoration: none;
+    touch-action: manipulation;
+    padding: 10px; /* Add padding to the links for better spacing */
+}
+
+nav ul:nth-of-type(2) {
+    align-items: center;
+    gap: var(--default-padding);
+    justify-content: flex-end; /* Align items to the right */
+    width: 50%; /* Adjust the width as needed */
+}
+
+nav ul:nth-of-type(2) li {
+    align-items: center;
+    border-bottom: 0.4rem solid transparent;
+    height: var(--full-h);
+    padding: 0 var(--default-padding);
+    transition: border var(--short-duration) ease-in;
+}
+
+nav ul:nth-of-type(2) li:first-of-type,
+nav ul:nth-of-type(2) li:last-of-type {
+    margin-left: auto;
+}
+
+nav ul:nth-of-type(2) li:hover {
+    border-color: var(--light-yellow);
+}
+
+nav ul:nth-of-type(2) li:hover a {
+    color: var(--yellow);
+}
+
